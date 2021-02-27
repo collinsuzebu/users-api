@@ -20,9 +20,9 @@ describe("Routes", () => {
     });
   });
 
-  afterAll(async (done) => {
+  afterAll(() => {
     mongoose.connection.db.dropDatabase(() => {
-      mongoose.connection.close(() => done());
+      mongoose.connection.close();
     });
   });
 
